@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🎂 Happy Birthday 🎉</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>🎉 Happy Birthday, DOC ! 🎂 💖</h1>
+  <p>
+    happy birthday rarane sghira hadi hhh ,l39oba 
+    l 100 ans  wnti pediatrician  nchllh 👩‍⚕️ 
+  </p>
+
+  <!-- Video -->
+<video id="birthdayVideo" autoplay loop muted playsinline>
+  <source src="vedio.mp4" type="video/mp4">
+  Your browser does not support video playback.
+</video>
+
+<!-- Sound Button -->
+<button id="soundBtn" onclick="unmuteVideo()">🔊 Enable Sound</button>
+
+<script>
+function unmuteVideo() {
+  let vid = document.getElementById("birthdayVideo");
+  let btn = document.getElementById("soundBtn");
+  vid.muted = false;
+  vid.play();
+  btn.style.display = "none"; // Hide button after enabling sound
+}
+</script>
+
+
+
+  <!-- Balloons floating -->
+  <div class="balloon red"></div>
+  <div class="balloon blue"></div>
+  <div class="balloon green"></div>
+  <div class="balloon yellow"></div>
+  <div class="balloon pink"></div>
+
+</body>
+</html>
