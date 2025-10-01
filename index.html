@@ -8,20 +8,33 @@
 </head>
 <body>
 
-  <h1>🎉 Happy Birthday, DOC ! 🎂 💖</h1>
-  <p>
-    happy birthday rarane sghira hadi hhh ,l39oba 
-    l 100 ans  wnti pediatrician  nchllh 👩‍⚕️ 
+  <!-- Header -->
+  < <h1 class="birthday-title">
+    🎉 Happy Birthday, <span class="highlight">DOC !</span> 🎂🩷
+  </h1>
+  <p class="birthday-message">
+    <span class="typing">Happy birthday rarane sghira hhh 🎂, l39oba 
+    l 100 ans 🎉 wnti pediatrician nchllh 👩‍⚕️</span>
   </p>
 
   <!-- Video -->
-<video id="birthdayVideo" autoplay loop muted playsinline>
-  <source src="vedio.mp4" type="video/mp4">
-  Your browser does not support video playback.
-</video>
+  <video id="birthdayVideo" autoplay loop muted playsinline>
+    <source src="vedio.mp4" type="video/mp4">
+    Your browser does not support video playback.
+  </video>
 
-<!-- Sound Button -->
-<button id="soundBtn" onclick="unmuteVideo()">🔊 Enable Sound</button>
+  <!-- Sound Button -->
+  <button id="soundBtn" onclick="unmuteVideo()">🔊 Enable Sound</button>
+
+  <!-- Balloons floating -->
+  <div class="balloon red"></div>
+  <div class="balloon blue"></div>
+  <div class="balloon green"></div>
+  <div class="balloon yellow"></div>
+  <div class="balloon pink"></div>
+
+  <!-- Confetti container -->
+  <div class="confetti"></div>
 
 <script>
 function unmuteVideo() {
@@ -31,16 +44,18 @@ function unmuteVideo() {
   vid.play();
   btn.style.display = "none"; // Hide button after enabling sound
 }
+
+// Generate confetti dynamically
+const confettiContainer = document.querySelector('.confetti');
+for (let i = 0; i < 50; i++) {
+  let confetto = document.createElement('div');
+  confetto.className = 'confetto';
+  confetto.style.left = Math.random() * 100 + 'vw';
+  confetto.style.animationDelay = Math.random() * 5 + 's';
+  confetto.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+  confettiContainer.appendChild(confetto);
+}
 </script>
-
-
-
-  <!-- Balloons floating -->
-  <div class="balloon red"></div>
-  <div class="balloon blue"></div>
-  <div class="balloon green"></div>
-  <div class="balloon yellow"></div>
-  <div class="balloon pink"></div>
 
 </body>
 </html>
